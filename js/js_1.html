@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>在js的变量比较中</title>
+</head>
+<body>
+	在js的变量比较中
+1,如果两个变量都是字符串的，按照字符串的比较方式进行比较
+例如:
+a = '14400';
+b = '9600';
+
+结果：a > b  返回的是false ，比较的字符串，依次比较两个字符串的字符ascii
+
+2,如果两个变量中任意一个是数字或者两个都是数字，是按照数字的比较方式比较的
+例如:
+a = '14400';
+b = 9600;
+
+结果：a > b  返回的是true；把字符串转换为数字，在比较
+
+在php中，都是按照数字进行比较，字符串的比较用strcmp
+	<script type="text/javascript">
+		
+		var a = '14400'
+		var b = '9600'
+		console.log(a >b);
+		var c = '14400'
+		var d = 9600
+		console.log(c >d)
+	</script>
+</body>
+</html>
